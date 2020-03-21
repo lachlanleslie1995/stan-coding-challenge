@@ -1,0 +1,97 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+}
+
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  z-index: 99;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  color: #999;
+  max-width: 100%;
+  padding: 200px 150px 200px 150px;
+}
+
+.body:after {
+  content: "";
+  display: block;
+  height: 100px;
+}
+
+.header-wrapper .nav-bar {
+  display: flex;
+  height: 75px;
+  background: linear-gradient(#09f, #0060fa);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 150px;
+}
+
+.header-wrapper .page-title {
+  display: flex;
+  background-color: #464646;
+  padding-left: 150px;
+  height: 75px;
+}
+
+.header-wrapper .nav-bar .nav-bar-left {
+  font-size: 48px;
+  justify-content: space-between;
+}
+
+.header-wrapper .nav-bar .nav-bar-right {
+  justify-content: space-between;
+}
+
+.header-wrapper .nav-bar .nav-bar-right .trial-button {
+  background: #464646;
+  padding: 10px;
+}
+
+.header-wrapper .nav-bar .nav-bar-right .login-button {
+  margin-right: 30px;
+}
+
+.header-wrapper .nav-bar a,
+.footer-wrapper a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  clear: both;
+  height: 200px;
+  width: 100%;
+  background: #232323;
+}
+
+footer .footer-wrapper {
+  color: #bdbdbd;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
