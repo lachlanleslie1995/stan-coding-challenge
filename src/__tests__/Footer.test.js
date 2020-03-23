@@ -6,7 +6,7 @@ import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import Footer from "../Footer";
 
-test("Test that the Footer renders all of its components correctly ", () => {
+test("Test that the Footer renders all of its components and elements correctly ", () => {
   const { container, getByTestId } = render(<Footer />);
   const footNavBar = getByTestId("footer-nav-bar");
   const copyrightInfo = getByTestId("copyright-info");
