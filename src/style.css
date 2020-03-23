@@ -91,7 +91,61 @@ footer {
 
 footer .footer-wrapper {
   color: #bdbdbd;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  display: inline-block;
+  padding: 15px 60px 30px 100px;
+}
+
+footer .footer-wrapper a img {
+  height: 34px;
+  width: 41px;
+  margin-right: 16px;
+}
+
+footer .footer-wrapper li a:hover,
+a:active {
+  filter: invert(45%) sepia(35%) saturate(4451%) hue-rotate(181deg)
+    brightness(100%) contrast(108%);
+}
+
+footer .footer-wrapper .social-media a:hover,
+a:active {
+  filter: invert(45%) sepia(35%) saturate(4451%) hue-rotate(181deg)
+    brightness(100%) contrast(108%);
+}
+
+footer .footer-wrapper .footer-nav-bar {
+  padding: 0;
+}
+
+footer .footer-wrapper .footer-nav-bar li {
+  display: inline;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+footer .footer-wrapper .footer-nav-bar li:not(:last-child):after {
+  content: "|";
+  padding: 0 0.8em;
+}
+
+footer .footer-wrapper .footer-nav-bar a:hover:after {
+  color: #bdbdbd;
+  filter: none;
+}
+
+.footer-wrapper .social-media {
+  position: absolute;
+  left: 100px;
+  bottom: 30px;
+}
+
+.footer-wrapper .app-stores {
+  position: absolute;
+  right: 150px;
+  bottom: 30px;
+}
+
+.footer-wrapper .app-stores a img {
+  width: 126px;
+  height: 45px;
 }
