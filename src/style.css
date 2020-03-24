@@ -38,6 +38,41 @@ body {
   height: 100px;
 }
 
+.body .home-page .tile {
+  position: relative;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.body .home-page .tile .tile-img {
+  position: relative;
+  background: #232323;
+  height: 260px;
+  width: 164px;
+}
+
+.body .home-page .tile .tile-img img {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: -45px;
+  margin: auto;
+}
+
+.body .home-page .tile .tile-img .img-text {
+  position: absolute;
+  top: 110px;
+  left: 40px;
+  width: 164px;
+  font-size: 32px;
+  color: white;
+}
+
+.body .home-page .tile a {
+  text-decoration: none;
+  color: #bdbdbd;
+}
+
 .header-wrapper .nav-bar {
   display: flex;
   height: 75px;

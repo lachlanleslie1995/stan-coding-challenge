@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Login from "./Login";
 import Trial from "./Trial";
 import HomePage from "./HomePage";
+import Series from "./Series";
 
 const App = () => {
   return (
@@ -16,11 +17,11 @@ const App = () => {
         </header>
         <div className="body">
           <Router>
+            <HomePage path="/" />
             <Login path="/login" />
             <Trial path="/trial" />
-            <HomePage path="/" />
-            {/*<Series path="/Series" />
-          <Movies path="/Movies" /> */}
+            <Series path="/Series" />
+            {/*<Movies path="/Movies" /> */}
           </Router>
         </div>
         <Footer />

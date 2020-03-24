@@ -22,6 +22,7 @@ test("Test the site name link exists and is clickable", () => {
 
   expect(siteName).toBeInTheDocument();
   fireEvent.click(siteName);
+  expect(window.location.href).toContain("/");
 });
 test("Test the login link exists and is clickable", () => {
   const { getByText } = render(<NavBar />);
@@ -29,6 +30,7 @@ test("Test the login link exists and is clickable", () => {
 
   expect(login).toBeInTheDocument();
   fireEvent.click(login);
+  expect(window.location.href).toContain("login");
 });
 
 test("Test that the trial link exists and is clickable", () => {
@@ -37,4 +39,5 @@ test("Test that the trial link exists and is clickable", () => {
 
   expect(trial).toBeInTheDocument();
   fireEvent.click(trial);
+  expect(window.location.href).toContain("trial");
 });
