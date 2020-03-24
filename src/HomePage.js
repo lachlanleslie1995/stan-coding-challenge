@@ -1,9 +1,21 @@
 import React from "react";
+import Tile from "./Tile";
 
 const HomePage = () => {
   return (
-    <div>
-      <p>Home Page</p>
+    <div className="home-page">
+      <Tile
+        title="Popular Series"
+        altText="Series"
+        imageSource=""
+        url="Series"
+      />
+      <Tile
+        title="Popular Movies"
+        altText="Movies"
+        imageSource=""
+        url="Movies"
+      />
     </div>
   );
 };
