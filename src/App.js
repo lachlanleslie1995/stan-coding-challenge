@@ -7,6 +7,7 @@ import Login from "./Login";
 import Trial from "./Trial";
 import HomePage from "./HomePage";
 import Series from "./Series";
+import Movies from "./Movies";
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
             <Login path="/login" />
             <Trial path="/trial" />
             <Series path="/Series" />
-            {/*<Movies path="/Movies" /> */}
+            <Movies path="/Movies" />
           </Router>
         </div>
         <Footer />

@@ -7,7 +7,7 @@ import "@testing-library/jest-dom/extend-expect";
 import Tile from "../Tile";
 
 test("Test that the Tile renders all of its components and elements correctly ", () => {
-  const { container, getByTestId } = render(<Tile />);
+  const { container, getByTestId } = render(<Tile props={{}} />);
   const tile = getByTestId("tile");
   const tileImage = getByTestId("tile-img");
   const imageText = getByTestId("img-text");
@@ -18,8 +18,10 @@ test("Test that the Tile renders all of its components and elements correctly ",
   expect(container).toContainElement(tileTitle);
 });
 
-test("Test that the Tile correctly displays all of it's values from props", () => {
-  const { container } = render(<Tile title="title" altText="altText" />);
+test("Test that the Tile correctly displays it's values from props", () => {
+  const { container } = render(
+    <Tile props={{ title: "title" }} altText="altText" />
+  );
   expect(container.textContent).toMatch("title");
   expect(container.textContent).toMatch("altText");
 });

@@ -1,21 +1,23 @@
 import React from "react";
 import Tile from "./Tile";
 
+const series = {
+  title: "Popular Series",
+  imageSource: "",
+  url: "Series"
+};
+
+const movies = {
+  title: "Popular Movies",
+  imageSource: "",
+  url: "Series"
+};
+
 const HomePage = () => {
   return (
     <div className="home-page">
-      <Tile
-        title="Popular Series"
-        altText="Series"
-        imageSource=""
-        url="Series"
-      />
-      <Tile
-        title="Popular Movies"
-        altText="Movies"
-        imageSource=""
-        url="Movies"
-      />
+      <Tile props={series} imageSource="" altText="Series" url="Series" />
+      <Tile props={movies} altText="Movies" imageSource="" url="Movies" />
     </div>
   );
 };

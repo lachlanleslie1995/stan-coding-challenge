@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 
-const Tile = ({ title, imageSource, altText, url }) => {
+const Tile = ({ props, imageSource, altText, url }) => {
   return (
     <div className="tile" data-testid="tile">
       <Link to={"/" + url}>
@@ -11,14 +11,14 @@ const Tile = ({ title, imageSource, altText, url }) => {
               imageSource ||
               "https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/assets/placeholder.png"
             }
-            alt={title}
+            alt={props.title}
           ></img>
           <div className="img-text" data-testid="img-text">
             {!imageSource ? altText : ""}
           </div>
         </div>
         <div className="tile-title" data-testid="tile-title">
-          <p>{title}</p>
+          <p>{props.title}</p>
         </div>
       </Link>
     </div>
