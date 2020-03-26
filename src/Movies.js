@@ -3,13 +3,13 @@ import useFetch from "./UseFetch";
 import Loading from "./Loading";
 import Tile from "./Tile";
 
-const Series = () => {
+const Movies = () => {
   const [response, loading] = useFetch(
     "https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json"
   );
 
   return (
-    <div className="series" data-testid="series">
+    <div className="movies" data-testid="movies">
       {loading ? (
         <Loading />
       ) : (
@@ -18,7 +18,7 @@ const Series = () => {
             return entryA.title > entryB.title;
           })
           .filter(entry => {
-            return entry.programType == "series" && entry.releaseYear >= 2010;
+            return entry.programType == "movie" && entry.releaseYear >= 2010;
           })
           .map((entry, index) => {
             if (index < 21) {
@@ -37,4 +37,4 @@ const Series = () => {
   );
 };
 
-export default Series;
+export default Movies;

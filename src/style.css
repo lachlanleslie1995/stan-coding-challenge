@@ -55,22 +55,47 @@ body {
   position: absolute;
   bottom: 0;
   top: 0;
-  left: -45px;
+  left: -60px;
   margin: auto;
+  height: 180px;
+  width: 280px;
 }
 
 .body .home-page .tile .tile-img .img-text {
   position: absolute;
   top: 110px;
-  left: 40px;
+  left: 30px;
   width: 164px;
   font-size: 32px;
   color: white;
 }
 
-.body .home-page .tile a {
+.body .series,
+.movies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.body .tile {
+  height: 300px;
+  width: 164px;
+  margin-right: 15px;
+  padding-bottom: 15px;
+}
+
+.body .tile .tile-title {
+  margin-top: -10px;
+}
+
+.body .tile .tile-img img {
+  height: 260px;
+  width: 164px;
+}
+
+.body .tile a {
   text-decoration: none;
-  color: #bdbdbd;
+  color: #2d2421;
 }
 
 .header-wrapper .nav-bar {
@@ -127,7 +152,7 @@ footer {
 footer .footer-wrapper {
   color: #bdbdbd;
   display: inline-block;
-  padding: 15px 60px 30px 100px;
+  padding: 15px 60px 30px 145px;
 }
 
 footer .footer-wrapper a img {
@@ -170,7 +195,7 @@ footer .footer-wrapper .footer-nav-bar a:hover:after {
 
 .footer-wrapper .social-media {
   position: absolute;
-  left: 100px;
+  left: 145px;
   bottom: 30px;
 }
 
