@@ -37,7 +37,7 @@ test("Test that useFetch returns the correct values if given a valid url and sta
   axios.get.mockResolvedValueOnce(mockResponse);
   const { result, waitForNextUpdate } = renderHook(() => useFetch(url));
 
-  expect(result.current).toStrictEqual([{}, true, null]);
+  expect(result.current).toStrictEqual([{ data: { entries: [] } }, true, null]);
 
   await waitForNextUpdate();
 

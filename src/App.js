@@ -8,6 +8,7 @@ import Trial from "./components/Trial";
 import HomePage from "./components/HomePage";
 import Series from "./components/Series";
 import Movies from "./components/Movies";
+import Error from "./components/Error";
 
 const App = () => {
   return (
@@ -17,13 +18,15 @@ const App = () => {
           <Header />
         </header>
         <div className="body">
-          <Router>
-            <HomePage path="/" />
-            <Login path="/login" />
-            <Trial path="/trial" />
-            <Series path="/Series" />
-            <Movies path="/Movies" />
-          </Router>
+          <Error>
+            <Router>
+              <HomePage path="/" />
+              <Login path="/login" />
+              <Trial path="/trial" />
+              <Series path="/Series" />
+              <Movies path="/Movies" />
+            </Router>
+          </Error>
         </div>
         <Footer />
       </div>

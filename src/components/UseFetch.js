@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+const initialResponse = {
+  data: { entries: [] }
+};
 const useFetch = url => {
-  const [response, setResponse] = useState({});
+  const [response, setResponse] = useState(initialResponse);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     setLoading(true);
-    setResponse({});
+    setResponse(initialResponse);
     setError(null);
 
     const fetchUrl = async () => {
