@@ -19,7 +19,6 @@ const Series = () => {
           return entry.programType == "series" && entry.releaseYear >= 2010;
         })
     );
-    throw new Error("I crashed!");
   }, [response]);
 
   return (
