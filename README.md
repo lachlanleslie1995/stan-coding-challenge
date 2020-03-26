@@ -61,7 +61,13 @@ To build the project for production
 
 ### Are there any improvements you could make to your submission?
 
+    * Better testing (Reasoning below).
+    * Better css styling, probably could've approached my styling to make it more concise and less cluttered.
+    * Should've tested more from the perspective of a user instead of that of a developer.
+    * Code coverage would be a nice addition.
+
 ### What would you do differently if you were allocated more time?
 
-    * Better testing, I don't think I've testing everything I should but I need more experience in testing react application to be able to achieve this in the alloted time
-    * Different types of testing, I limited myself to just some basic unit testing for this submissiong but I would've loved to have done some End to end testing with Cypress or some
+    * Better testing, I don't think I've testing everything I should but I need more experience in testing react application to be able to achieve this in the alloted time.
+    * Different types of testing, I limited myself to just some basic unit testing for this submissiong but I would've loved to have done some End to end testing with Cypress.
+    * Maybe with more experience/knowledge of how to design/structure a react application I would've chosen to structure my application differently.
