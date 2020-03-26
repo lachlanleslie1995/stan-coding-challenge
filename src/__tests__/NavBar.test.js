@@ -4,7 +4,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import NavBar from "../NavBar";
+import NavBar from "../components/NavBar";
 
 test("Test that the navbar renders and contains the correct elements", () => {
   const { container, getByText } = render(<NavBar />);

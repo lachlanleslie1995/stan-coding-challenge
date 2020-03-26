@@ -4,7 +4,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import FooterNavBar from "../FooterNavBar";
+import FooterNavBar from "../components/FooterNavBar";
 
 test("Test that the Footer Navbar renders all of its components and elements correctly ", () => {
   const { container, getByTestId } = render(<FooterNavBar />);

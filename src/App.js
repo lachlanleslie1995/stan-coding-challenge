@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Router } from "@reach/router";
-import Header from "./Header";
-import Footer from "./Footer";
-import Login from "./Login";
-import Trial from "./Trial";
-import HomePage from "./HomePage";
-import Series from "./Series";
-import Movies from "./Movies";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Login from "./components/Login";
+import Trial from "./components/Trial";
+import HomePage from "./components/HomePage";
+import Series from "./components/Series";
+import Movies from "./components/Movies";
 
 const App = () => {
   return (

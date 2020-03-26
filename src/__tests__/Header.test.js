@@ -4,7 +4,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import Header from "../Header";
+import Header from "../components/Header";
 
 test("Test that the Header renders both the navbar and titlebar", () => {
   const { container, getByTestId } = render(<Header />);
