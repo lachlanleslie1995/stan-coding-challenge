@@ -4,7 +4,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import Footer from "../Footer";
+import Footer from "../components/Footer";
 
 test("Test that the Footer renders all of its components and elements correctly ", () => {
   const { container, getByTestId } = render(<Footer />);

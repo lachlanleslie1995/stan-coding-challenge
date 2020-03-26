@@ -4,7 +4,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import Tile from "../Tile";
+import Tile from "../components/Tile";
 
 test("Test that the Tile renders all of its components and elements correctly ", () => {
   const { container, getByTestId } = render(<Tile props={{}} />);
