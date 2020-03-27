@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TitleContext } from "./TitleContext";
 
 const Title = () => {
+  const { title } = useContext(TitleContext);
   return (
     <div className="page-title" data-testid="page-title">
-      <h1>Popular Titles</h1>
+      <h1>{title}</h1>
     </div>
   );
 };

@@ -9,6 +9,7 @@ body {
   position: relative;
   min-height: 100%;
   width: 100%;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
 }
 
 .header-wrapper {
@@ -23,7 +24,6 @@ body {
 .body {
   display: flex;
   flex-direction: column;
-  font-family: Arial;
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
@@ -116,6 +116,7 @@ body {
 
 .header-wrapper .nav-bar .nav-bar-left {
   font-size: 48px;
+  font-weight: 900;
   justify-content: space-between;
 }
 
