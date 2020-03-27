@@ -51,13 +51,12 @@ To build the project for production
 
 ### How did you decide on the technical and architectural choices used as part of your solution?
 
-    * I chose to approach this app in a TDD (Test Driven Development) way as I believe it helps create tidier code with fewer dependencies and less bugs.
+    * I chose to approach this app in a TDD (Test Driven Development) way as much as possible as I believe it helps create tidier code with fewer dependencies and less bugs.
     * As it is a small and simple application I chose to use [parcel-bundler](https://github.com/parcel-bundler/parcel) for building/deployment due to its speed and ease of configuration.
     * Used a combination of [React-testing-library](https://github.com/testing-library/react-testing-library), [React-hooks-testing-library](https://github.com/testing-library/react-hooks-testing-library) and [Jest](https://jestjs.io/) because they're simple to use and easy to read if you're not familiar with it/the person who wrote the. Also jests error messages are really good.
     * I tried to structure the project in such a way that each componet was as generic as possible while still being loosely coupled.
     * I chose to use [reach-router](https://github.com/reach/router) over react-router as it has more features catered to accessibility while still being a small and simple router.
-    * I chose to use [Axios](https://github.com/axios/axios) - The web framework used for the request library as it's easier to mock out for testing with jest.
-    * Chose not to lazy load as this is a simple small app.
+    * I chose to use [Axios](https://github.com/axios/axios) for the request library as it's easier to mock out for testing with jest.
 
 ### Are there any improvements you could make to your submission?
 
