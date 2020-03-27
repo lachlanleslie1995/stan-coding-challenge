@@ -9,27 +9,30 @@ import HomePage from "./components/HomePage";
 import Series from "./components/Series";
 import Movies from "./components/Movies";
 import Error from "./components/Error";
+import { TitleProvider } from "./components/TitleContext";
 
 const App = () => {
   return (
     <React.StrictMode>
-      <div id="app">
-        <header>
-          <Header />
-        </header>
-        <div className="body">
-          <Error>
-            <Router>
-              <HomePage path="/" />
-              <Login path="/login" />
-              <Trial path="/trial" />
-              <Series path="/Series" />
-              <Movies path="/Movies" />
-            </Router>
-          </Error>
+      <TitleProvider>
+        <div id="app">
+          <header>
+            <Header />
+          </header>
+          <div className="body">
+            <Error>
+              <Router>
+                <HomePage path="/" />
+                <Login path="/login" />
+                <Trial path="/trial" />
+                <Series path="/Series" />
+                <Movies path="/Movies" />
+              </Router>
+            </Error>
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </TitleProvider>
     </React.StrictMode>
   );
 };

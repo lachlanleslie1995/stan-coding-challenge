@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import Tile from "./Tile";
+import { TitleContext } from "./TitleContext";
 
 const series = {
   title: "Popular Series",
@@ -14,10 +15,15 @@ const movies = {
 };
 
 const HomePage = () => {
+  const { setTitle } = useContext(TitleContext);
+
+  useEffect(() => {
+    setTitle("Popular Titles");
+  });
   return (
     <div className="home-page">
       <Tile props={series} imageSource="" altText="Series" url="Series" />
-      <Tile props={movies} altText="Movies" imageSource="" url="Movies" />
+      <Tile props={movies} imageSource="" altText="Movies" url="Movies" />
     </div>
   );
 };
