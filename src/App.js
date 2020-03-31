@@ -9,7 +9,7 @@ import HomePage from "./components/HomePage";
 import Series from "./components/Series";
 import Movies from "./components/Movies";
 import Error from "./components/Error";
-import { TitleProvider } from "./components/TitleContext";
+import { TitleProvider } from "./TitleContext";
 
 const App = () => {
   return (

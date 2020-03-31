@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { TitleContext } from "./TitleContext";
+import { TitleContext } from "../TitleContext";
 
 const Title = () => {
   const { title } = useContext(TitleContext);

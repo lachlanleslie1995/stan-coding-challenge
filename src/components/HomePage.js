@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import Tile from "./Tile";
-import { TitleContext } from "./TitleContext";
+import { TitleContext } from "../TitleContext";
 
 const series = {
   title: "Popular Series",

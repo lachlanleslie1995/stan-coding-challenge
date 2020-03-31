@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
-import useFetch from "./UseFetch";
+import useFetch from "../Utils/UseFetch";
 import Loading from "./Loading";
 import Tile from "./Tile";
-import { TitleContext } from "./TitleContext";
+import { TitleContext } from "../TitleContext";
 
 const Movies = () => {
   const [response, loading] = useFetch(
