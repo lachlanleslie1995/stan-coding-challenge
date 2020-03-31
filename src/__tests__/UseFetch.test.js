@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import useFetch from "../components/UseFetch";
+import useFetch from "../Utils/UseFetch";
 import { renderHook } from "@testing-library/react-hooks";
 import axios from "axios";
 

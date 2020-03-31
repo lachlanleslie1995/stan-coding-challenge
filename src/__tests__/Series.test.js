@@ -5,7 +5,7 @@ import React from "react";
 import { render, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import Series from "../components/Series";
-import { TitleProvider } from "../components/TitleContext";
+import { TitleProvider } from "../TitleContext";
 
 test("Test that the Series renders all of its components and elements correctly ", async () => {
   const { container, getByTestId } = render(
