@@ -1,8 +1,10 @@
 {
-  "name": "stan-challenge",
+  "name": "stan-coding-challenge",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://lachlanleslie1995.github.io/stan-cooding-challenge",
+  "repository": "https://lachlanleslie1995.github.io/stan-coding-challenge",
   "dependencies": {
     "@reach/router": "^1.3.3",
     "axios": "^0.19.2",
@@ -39,9 +41,10 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "test": "jest",
     "test:watch": "jest --watch"
+    "build:gh": "parcel build src/index.html --public-url /stan-coding-challenge/"
   },
   "jest": {
     "setupFilesAfterEnv": [
