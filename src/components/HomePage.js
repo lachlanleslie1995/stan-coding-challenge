@@ -22,8 +22,8 @@ const HomePage = () => {
   });
   return (
     <div className="home-page">
-      <Tile props={series} imageSource="" altText="Series" url="Series" />
-      <Tile props={movies} imageSource="" altText="Movies" url="Movies" />
+      <Tile props={series} imageSource="" altText="Series" url="series" />
+      <Tile props={movies} imageSource="" altText="Movies" url="movies" />
     </div>
   );
 };

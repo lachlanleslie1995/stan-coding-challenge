@@ -10,6 +10,7 @@ import Series from "./components/Series";
 import Movies from "./components/Movies";
 import Error from "./components/Error";
 import { TitleProvider } from "./TitleContext";
+import MediaDetails from "./components/MediaDetails";
 
 const App = () => {
   return (
@@ -25,8 +26,9 @@ const App = () => {
                 <HomePage path="/" />
                 <Login path="/login" />
                 <Trial path="/trial" />
-                <Series path="/Series" />
-                <Movies path="/Movies" />
+                <Series path="/series" />
+                <Movies path="/movies" />
+                <MediaDetails path="/:mediaType/:title" />
               </Router>
             </Error>
           </div>

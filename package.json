@@ -43,7 +43,7 @@
     "build": "parcel build src/index.html",
     "deploy": "gh-pages -d dist",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
     "build:gh": "parcel build src/index.html --public-url /stan-coding-challenge/"
   },
   "jest": {

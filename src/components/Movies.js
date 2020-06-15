@@ -36,7 +36,7 @@ const Movies = () => {
                 key={index}
                 props={entry}
                 imageSource={entry.images["Poster Art"].url}
-                url={"movies/" + index}
+                url={"movies/" + entry.title}
               />
             );
           }
