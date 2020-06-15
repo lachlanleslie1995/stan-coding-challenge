@@ -31322,12 +31322,12 @@ const HomePage = () => {
     props: series,
     imageSource: "",
     altText: "Series",
-    url: "Series"
+    url: "series"
   }), _react.default.createElement(_Tile.default, {
     props: movies,
     imageSource: "",
     altText: "Movies",
-    url: "Movies"
+    url: "movies"
   }));
 };
 
@@ -33211,7 +33211,7 @@ const Series = () => {
         key: index,
         props: entry,
         imageSource: entry.images["Poster Art"].url,
-        url: "series/" + index
+        url: "series/" + entry.title
       });
     }
   }));
@@ -33264,7 +33264,7 @@ const Movies = () => {
         key: index,
         props: entry,
         imageSource: entry.images["Poster Art"].url,
-        url: "movies/" + index
+        url: "movies/" + entry.title
       });
     }
   }));
@@ -33317,7 +33317,49 @@ class Error extends _react.Component {
 
 var _default = Error;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"components/MediaDetails.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _Loading = _interopRequireDefault(require("./Loading"));
+
+var _UseFetch = _interopRequireDefault(require("../Utils/UseFetch"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+const MediaDetails = ({
+  title
+}) => {
+  const [response, loading] = (0, _UseFetch.default)("https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json");
+  const [media, setMedia] = (0, _react.useState)([]);
+  (0, _react.useEffect)(() => {
+    setMedia(response.data.entries.filter(entry => {
+      return entry.title == title;
+    }));
+  }, [response, title]);
+  console.log(media);
+  return _react.default.createElement("div", {
+    className: "media-details",
+    "data-testid": "media-details"
+  }, loading ? _react.default.createElement(_Loading.default, null) : _react.default.createElement("div", null, _react.default.createElement("img", {
+    src: media[0].images["Poster Art"].url || "https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/assets/placeholder.png",
+    alt: media[0].title
+  }), _react.default.createElement("h1", null, media[0].title), _react.default.createElement("p", null, media[0].description)), ";");
+};
+
+var _default = MediaDetails;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./Loading":"components/Loading.js","../Utils/UseFetch":"Utils/UseFetch.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -33344,6 +33386,8 @@ var _Error = _interopRequireDefault(require("./components/Error"));
 
 var _TitleContext = require("./TitleContext");
 
+var _MediaDetails = _interopRequireDefault(require("./components/MediaDetails"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const App = () => {
@@ -33358,14 +33402,16 @@ const App = () => {
   }), _react.default.createElement(_Trial.default, {
     path: "/trial"
   }), _react.default.createElement(_Series.default, {
-    path: "/Series"
+    path: "/series"
   }), _react.default.createElement(_Movies.default, {
-    path: "/Movies"
+    path: "/movies"
+  }), _react.default.createElement(_MediaDetails.default, {
+    path: "/:mediaType/:title"
   })))), _react.default.createElement(_Footer.default, null))));
 };
 
 _reactDom.default.render(_react.default.createElement(App), document.getElementById("root"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","@reach/router":"../node_modules/@reach/router/es/index.js","./components/Header":"components/Header.js","./components/Footer":"components/Footer.js","./components/Login":"components/Login.js","./components/Trial":"components/Trial.js","./components/HomePage":"components/HomePage.js","./components/Series":"components/Series.js","./components/Movies":"components/Movies.js","./components/Error":"components/Error.js","./TitleContext":"TitleContext.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","@reach/router":"../node_modules/@reach/router/es/index.js","./components/Header":"components/Header.js","./components/Footer":"components/Footer.js","./components/Login":"components/Login.js","./components/Trial":"components/Trial.js","./components/HomePage":"components/HomePage.js","./components/Series":"components/Series.js","./components/Movies":"components/Movies.js","./components/Error":"components/Error.js","./TitleContext":"TitleContext.js","./components/MediaDetails":"components/MediaDetails.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -33393,7 +33439,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49910" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59418" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

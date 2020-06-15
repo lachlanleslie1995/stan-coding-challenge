@@ -77,6 +77,15 @@ body {
   flex-wrap: wrap;
 }
 
+.body .media-details img {
+  height: 500px;
+  width: 350px;
+}
+
+.body .media-details {
+  color: #2d2421;
+}
+
 .body .tile {
   height: 300px;
   width: 164px;
